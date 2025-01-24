@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Global Temperature Heatmap</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body>
+    <h1 id='title'>Monthly Global Land-Surface Temperature</h1>
+    <h3 id='description'>1753 - 2015: base temperature 8.66 </h3>
+    <div id="tooltip"></div>
+    <svg id="canvas">
+    </svg>
+
+    <svg id="legend">
+        <g>
+            <rect x="10" y="0" width="40" height ="40" fill="SteelBlue" />
+            <text x="60" y="20" fill="white"> Variance of -1 or less</text>
+        </g>
+        <g>
+            <rect x="10" y="40" width="40" height ="40" fill="LightSteelBlue" />
+            <text x="60" y="60" fill="white"> On or below average</text>
+        </g>
+        <g>
+            <rect x="10" y="80" width="40" height ="40" fill="Orange" />
+            <text x="60" y="100" fill="white"> above average</text>
+        </g>
+        <g>
+            <rect x="10" y="120" width="40" height ="40" fill="red" />
+            <text x="60" y="140" fill="white"> Variance of +1 or more</text>
+        </g>
+    </svg>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
